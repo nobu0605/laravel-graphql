@@ -14,6 +14,13 @@ final class User
         
         return $user;
     }
+
+    public function getUsers($rootValue, array $args, GraphQLContext $context, ResolveInfo $resolveInfo)
+    {
+        $user = UserModel::all();
+        
+        return $user;
+    }
 }
 
 
